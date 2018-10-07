@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <address-book class="button" />
     <h1>{{ msg }}</h1>
     <p>
       For guide and recipes on how to configure / customize this project,<br>
@@ -33,10 +34,19 @@
 </template>
 
 <script>
+import AddressBook from '@/assets/regular.svg?address-book'
 export default {
   name: 'HelloWorld',
+  components: {
+    'address-book': AddressBook
+  },
   props: {
     msg: String
+  },
+  methods: {
+    testMethod: () => {
+      return 1
+    }
   }
 }
 </script>
@@ -56,5 +66,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.button {
+  width: 10%;
+  height: 10%;
 }
 </style>
